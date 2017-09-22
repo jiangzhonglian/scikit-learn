@@ -129,7 +129,7 @@ def safe_sparse_dot(a, b, dense_output=False):
     Returns
     -------
     dot_product : array or sparse matrix
-        sparse if ``a`` or ``b`` is sparse and ``dense_output``=False.
+        sparse if ``a`` or ``b`` is sparse and ``dense_output=False``.
     """
     if issparse(a) or issparse(b):
         ret = a * b
@@ -421,7 +421,6 @@ def weighted_mode(a, w, axis=0):
     else:
         a = np.asarray(a)
         w = np.asarray(w)
-        axis = axis
 
     if a.shape != w.shape:
         w = np.zeros(a.shape, dtype=w.dtype) + w
